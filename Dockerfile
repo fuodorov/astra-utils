@@ -27,7 +27,7 @@ WORKDIR astra
 
 COPY data .
 
-ARG PARALLEL=TRUE
+ARG PARALLEL=true
 
 RUN wget https://www.desy.de/~mpyflo/Astra_for_64_Bit_Linux/generator \
     && chmod 777 generator \

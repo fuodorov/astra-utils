@@ -5,7 +5,7 @@ This repository contains a docker wrapper for the well-known [ASTRA](https://www
 ## Manual
 
 ```shell
-docker build . --file Dockerfile --tag astra --build-arg PARALLEL=FALSE
+docker build . --file Dockerfile --tag astra --build-arg PARALLEL=false
 ```
 
 ```shell
