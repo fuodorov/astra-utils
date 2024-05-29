@@ -3,11 +3,11 @@ FROM python:3.12
 ENV OMPI_SRC=https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.7.tar.gz
 ENV	PREFIX=/home/.openmpi
 
-RUN	apt update && apt install -y \
-		build-essential \
+RUN apt update && apt install -y \
+        build-essential \
         gfortran \
         curl \
-		git \
+        git \
         nano
 
 RUN curl -SL ${OMPI_SRC} | tar -xz -C /usr/src && \
@@ -27,9 +27,12 @@ WORKDIR astra
 
 COPY data .
 
+ARG PARALLEL=TRUE
+
 RUN wget https://www.desy.de/~mpyflo/Astra_for_64_Bit_Linux/generator \
     && chmod 777 generator \
-    && wget https://www.desy.de/~mpyflo/Parallel_Astra_for_Linux/Astra \
+    && if $PARALLEL; then wget https://www.desy.de/~mpyflo/Parallel_Astra_for_Linux/Astra; \
+       else wget https://www.desy.de/~mpyflo/Astra_for_64_Bit_Linux/Astra; fi \
     && chmod 777 Astra
 
-CMD ["mpirun", "Astra"]
+CMD ["./Astra"]
