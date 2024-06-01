@@ -5,13 +5,13 @@ This repository contains a docker wrapper for the well-known [ASTRA](https://www
 ## Manual
 
 ```shell
-docker build . --file Dockerfile --tag astra --build-arg PARALLEL=false
+docker build . -f Dockerfile -t astra --build-arg PARALLEL=true
 ```
 
 ```shell
-docker run -it astra bash
+docker run -v /path/to/your/astra/files:/work -it astra bash
 ```
 
 ```shell
-mpirun Astra Track.in
+mpirun Astra /work/your_track_file.in
 ```

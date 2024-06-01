@@ -23,10 +23,6 @@ ENV LD_LIBRARY_PATH="$PREFIX/lib:$LD_LIBRARY_PATH"
 ENV OMPI_ALLOW_RUN_AS_ROOT=1
 ENV OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
 
-WORKDIR data
-
-COPY data .
-
 ARG PARALLEL=true
 
 RUN wget https://www.desy.de/~mpyflo/Astra_for_64_Bit_Linux/generator \
