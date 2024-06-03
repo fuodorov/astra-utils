@@ -48,7 +48,7 @@ You will find the Jupyter Notebook interface with ASTRA and its examples ready t
 
 ### Example Notebooks
 
-The directory `/home/jovyan/astra_examples` contains several example notebooks that demonstrate how to use ASTRA with Python. 
+The directory `/home/jovyan/notebooks` contains several example notebooks that demonstrate how to use ASTRA with Python. 
 These examples are installed automatically during the build process.
 
 ## Contributing

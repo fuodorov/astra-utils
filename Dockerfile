@@ -40,7 +40,7 @@ RUN conda config --add channels conda-forge && conda install -y lume-astra
 ENV ASTRA_BIN=/home/jovyan/Astra
 ENV GENERATOR_BIN=/home/jovyan/generator
 
-RUN python3 -c "from astra.install import install_examples; install_examples('/home/jovyan/astra_examples/')"
+COPY notebooks /home/jovyan/notebooks
 
 WORKDIR /home/jovyan
 
