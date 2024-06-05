@@ -1,4 +1,4 @@
-# ASTRA Dockerfile
+# ASTRA Utils
 
 This repository contains a docker wrapper for the well-known [ASTRA](https://www.desy.de/~mpyflo/) simulation code by K. Floettmann (DESY Hamburg).
 
@@ -20,8 +20,8 @@ To build and run the Docker container, follow these steps:
 
 1. **Clone the repository**:
     ```shell
-    git clone https://github.com/fuodorov/astra-docker.git
-    cd astra-docker
+    git clone https://github.com/fuodorov/astra-utils.git
+    cd astra-utils
     ```
     
 
